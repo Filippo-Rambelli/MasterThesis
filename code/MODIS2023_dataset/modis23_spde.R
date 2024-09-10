@@ -9,8 +9,8 @@ options(mc.cores = 8)
 
 #we define a function that will be called for every tuning parameter
 run_spde<-function(max.edge){
-  train_data <- read.csv("/cluster/scratch/frambelli/data/MODIS_data_train.txt", row.names=1, sep="")
-  test_data<-read.csv("/cluster/scratch/frambelli/data/MODIS_data_test.txt", row.names=1, sep="")
+  train_data <- read.csv("/data/MODIS_data_train.txt", row.names=1, sep="")
+  test_data<-read.csv("/data/MODIS_data_test.txt", row.names=1, sep="")
   
   #scale down coordinates for numerical stability
   train_data$east<-train_data$east/10000
