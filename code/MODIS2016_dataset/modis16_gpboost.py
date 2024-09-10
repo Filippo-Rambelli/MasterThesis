@@ -16,8 +16,8 @@ def compute_kl(var1,var2,mean1,mean2):
     return kl.sum()
 
 #load data
-train_data = pd.read_csv("/data/HEATON_train.csv")
-test_data = pd.read_csv("/data/HEATON_test.csv")
+train_data = pd.read_csv("/data/Heaton_train.csv")
+test_data = pd.read_csv("/data/Heaton_test.csv")
 
 y_train = train_data['TrueTemp']
 coords_train = train_data[['Lat', 'Lon']]
