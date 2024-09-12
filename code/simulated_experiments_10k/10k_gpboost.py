@@ -17,35 +17,37 @@ def compute_kl(var1,var2,mean1,mean2):
 def vecchia_run(range_par,num_neighbors):
     if range_par == 0.5:
         df = pd.read_csv("/data/combined_data_05.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_5.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_5.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_5.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_5.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_5.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_5.txt")
-
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_5.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_5.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_5.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_5.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_5.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_5.txt")
     elif range_par==0.2:
         df = pd.read_csv("/data/combined_data_02.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_2.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_2.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_2.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_2.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_2.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_2.txt")
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_2.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_2.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_2.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_2.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_2.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_2.txt")
     elif range_par==0.05:
         df = pd.read_csv("/data/combined_data_005.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_05.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_05.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_05.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_05.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_05.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_05.txt")
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_05.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_05.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_05.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_05.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_05.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_05.txt")
     else:
         print('wrong range given')
         exit
@@ -334,35 +336,37 @@ def vecchia_run(range_par,num_neighbors):
 def tapering_run(range_par,cov_fct_taper_range):
     if range_par == 0.5:
         df = pd.read_csv("/data/combined_data_05.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_5.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_5.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_5.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_5.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_5.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_5.txt")
-
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_5.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_5.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_5.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_5.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_5.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_5.txt")
     elif range_par==0.2:
         df = pd.read_csv("/data/combined_data_02.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_2.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_2.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_2.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_2.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_2.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_2.txt")
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_2.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_2.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_2.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_2.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_2.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_2.txt")
     elif range_par==0.05:
         df = pd.read_csv("/data/combined_data_005.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_05.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_05.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_05.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_05.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_05.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_05.txt")
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_05.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_05.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_05.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_05.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_05.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_05.txt")
     else:
         print('wrong range given')
         exit
@@ -651,35 +655,37 @@ def tapering_run(range_par,cov_fct_taper_range):
 def fitc_run(range_par,num_ind_points):
     if range_par == 0.5:
         df = pd.read_csv("/data/combined_data_05.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_5.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_5.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_5.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_5.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_5.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_5.txt")
-
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_5.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_5.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_5.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_5.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_5.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_5.txt")
     elif range_par==0.2:
         df = pd.read_csv("/data/combined_data_02.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_2.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_2.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_2.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_2.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_2.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_2.txt")
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_2.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_2.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_2.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_2.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_2.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_2.txt")
     elif range_par==0.05:
         df = pd.read_csv("/data/combined_data_005.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_05.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_05.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_05.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_05.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_05.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_05.txt")
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_05.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_05.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_05.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_05.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_05.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_05.txt")
     else:
         print('wrong range given')
         exit
@@ -968,35 +974,37 @@ def fitc_run(range_par,num_ind_points):
 def fullscale_run(range_par,num_ind_points,cov_fct_taper_range):
     if range_par == 0.5:
         df = pd.read_csv("/data/combined_data_05.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_5.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_5.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_5.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_5.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_5.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_5.txt")
-
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_5.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_5.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_5.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_5.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_5.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_5.txt")
     elif range_par==0.2:
         df = pd.read_csv("/data/combined_data_02.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_2.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_2.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_2.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_2.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_2.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_2.txt")
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_2.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_2.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_2.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_2.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_2.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_2.txt")
     elif range_par==0.05:
         df = pd.read_csv("/data/combined_data_005.csv")
-        exact_pred_mean_train_whole = pd.read_csv("/data/train_mean_0_05.txt")
-        exact_pred_var_train_whole = pd.read_csv("/data/train_var_0_05.txt")
 
-        exact_pred_mean_inter_whole = pd.read_csv("/data/inter_mean_0_05.txt")
-        exact_pred_var_inter_whole = pd.read_csv("/data/inter_var_0_05.txt")
-
-        exact_pred_mean_extra_whole = pd.read_csv("/data/extra_mean_0_05.txt")
-        exact_pred_var_extra_whole = pd.read_csv("/data/extra_var_0_05.txt")
+        exact_pred_mean_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_train_0_05.txt")
+        exact_pred_var_train_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_train_0_05.txt")
+        
+        exact_pred_mean_inter_whole =pd.read_csv("/saved_values_exactGP/exact_pred_mean_inter_0_05.txt")
+        exact_pred_var_inter_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_inter_0_05.txt")
+        
+        exact_pred_mean_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_mean_extra_0_05.txt")
+        exact_pred_var_extra_whole = pd.read_csv("/saved_values_exactGP/exact_pred_var_extra_0_05.txt")
     else:
         print('wrong range given')
         exit

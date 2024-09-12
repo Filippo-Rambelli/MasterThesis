@@ -92,47 +92,43 @@ run_mra<-function(range=0.2,r=2){
   #as well as predictive means and variances again from exact computations
   if (range == 0.2) {
     full_data <- read_csv("/data/combined_data_02.csv")
-    exact_true_negloglik_list<- read.table("/data/true_exact_negloglik_values_0.2.txt", 
-                                           quote="\"", comment.char="")$V1
-    exact_fake_negloglik_list<-  read.table("/data/fake_exact_negloglik_values_0.2.txt", 
-                                            quote="\"", comment.char="")$V1
-    exact_pred_mean_train_whole = read.csv("/data/train_mean_0_2.txt")
-    exact_pred_var_train_whole = read.csv("/data/train_var_0_2.txt")
+    exact_true_negloglik_list<- read.table("/saved_values_exactGP/true_exact_negloglik_values_0.2.txt",  quote="\"", comment.char="")$V1
+    exact_fake_negloglik_list<-  read.table("/saved_values_exactGP/fake_exact_negloglik_values_0.2.txt",  quote="\"", comment.char="")$V1
+
+    exact_pred_mean_train_whole = read.csv("/saved_values_exactGP/exact_pred_mean_train_0_2.txt")
+    exact_pred_var_train_whole = read.csv("/saved_values_exactGP/exact_pred_var_train_0_2.txt")
     
-    exact_pred_mean_inter_whole = read.csv("/data/inter_mean_0_2.txt")
-    exact_pred_var_inter_whole = read.csv("/data/inter_var_0_2.txt")
+    exact_pred_mean_inter_whole = read.csv("/saved_values_exactGP/exact_pred_mean_inter_0_2.txt")
+    exact_pred_var_inter_whole = read.csv("/saved_values_exactGP/exact_pred_var_inter_0_2.txt")
     
-    exact_pred_mean_extra_whole = read.csv("/data/extra_mean_0_2.txt")
-    exact_pred_var_extra_whole = read.csv("/data/extra_var_0_2.txt")
+    exact_pred_mean_extra_whole = read.csv("/saved_values_exactGP/exact_pred_mean_extra_0_2.txt")
+    exact_pred_var_extra_whole = read.csv("/saved_values_exactGP/exact_pred_var_extra_0_2.txt")
   } else if (range == 0.5) {
     full_data <- read.csv("/data/combined_data_05.csv")
-    exact_true_negloglik_list<- read.table("/data/true_exact_negloglik_values_0.5.txt", 
-                                           quote="\"", comment.char="")$V1
-    exact_fake_negloglik_list<-  read.table("/data/fake_exact_negloglik_values_0.5.txt", 
-                                            quote="\"", comment.char="")$V1
+    exact_true_negloglik_list<- read.table("/saved_values_exactGP/true_exact_negloglik_values_0.5.txt", quote="\"", comment.char="")$V1
+    exact_fake_negloglik_list<-  read.table("/saved_values_exactGP/fake_exact_negloglik_values_0.5.txt", quote="\"", comment.char="")$V1
     
-    exact_pred_mean_train_whole = read.csv("/data/train_mean_0_5.txt")
-    exact_pred_var_train_whole = read.csv("/data/train_var_0_5.txt")
+    exact_pred_mean_train_whole = read.csv("/saved_values_exactGP/exact_pred_mean_train_0_5.txt")
+    exact_pred_var_train_whole = read.csv("/saved_values_exactGP/exact_pred_var_train_0_5.txt")
     
-    exact_pred_mean_inter_whole = read.csv("/data/inter_mean_0_5.txt")
-    exact_pred_var_inter_whole = read.csv("/data/inter_var_0_5.txt")
+    exact_pred_mean_inter_whole = read.csv("/saved_values_exactGP/exact_pred_mean_inter_0_5.txt")
+    exact_pred_var_inter_whole = read.csv("/saved_values_exactGP/exact_pred_var_inter_0_5.txt")
     
-    exact_pred_mean_extra_whole = read.csv("/data/extra_mean_0_5.txt")
-    exact_pred_var_extra_whole = read.csv("/data/extra_var_0_5.txt")
+    exact_pred_mean_extra_whole = read.csv("/saved_values_exactGP/exact_pred_mean_extra_0_5.txt")
+    exact_pred_var_extra_whole = read.csv("/saved_values_exactGP/exact_pred_var_extra_0_5.txt")
   } else if (range == 0.05) {  
     full_data <- read.csv("/data/combined_data_005.csv")
-    exact_true_negloglik_list<- read.table("/data/true_exact_negloglik_values_0.05.txt", 
-                                           quote="\"", comment.char="")$V1
-    exact_fake_negloglik_list<-  read.table("/data/fake_exact_negloglik_values_0.05.txt", 
-                                            quote="\"", comment.char="")$V1
-    exact_pred_mean_train_whole = read.csv("/data/train_mean_0_05.txt")
-    exact_pred_var_train_whole = read.csv("/data/train_var_0_05.txt")
+    exact_true_negloglik_list<- read.table("/saved_values_exactGP/true_exact_negloglik_values_0.05.txt", quote="\"", comment.char="")$V1
+    exact_fake_negloglik_list<-  read.table("/saved_values_exactGP/fake_exact_negloglik_values_0.05.txt", quote="\"", comment.char="")$V1
+
+    exact_pred_mean_train_whole = read.csv("/saved_values_exactGP/exact_pred_mean_train_0_05.txt")
+    exact_pred_var_train_whole = read.csv("/saved_values_exactGP/exact_pred_var_train_0_05.txt")
     
-    exact_pred_mean_inter_whole = read.csv("/data/inter_mean_0_05.txt")
-    exact_pred_var_inter_whole = read.csv("/data/inter_var_0_05.txt")
+    exact_pred_mean_inter_whole = read.csv("/saved_values_exactGP/exact_pred_mean_inter_0_05.txt")
+    exact_pred_var_inter_whole = read.csv("/saved_values_exactGP/exact_pred_var_inter_0_05.txt")
     
-    exact_pred_mean_extra_whole = read.csv("/data/extra_mean_0_05.txt")
-    exact_pred_var_extra_whole = read.csv("/data/extra_var_0_05.txt")
+    exact_pred_mean_extra_whole = read.csv("/saved_values_exactGP/exact_pred_mean_extra_0_05.txt")
+    exact_pred_var_extra_whole = read.csv("/saved_values_exactGP/exact_pred_var_extra_0_05.txt")
   } else {stop("Invalid range value") }
   
   eff_range=range/4.74
