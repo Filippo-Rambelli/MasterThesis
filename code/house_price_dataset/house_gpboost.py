@@ -30,12 +30,12 @@ y_extrapolation = extrapolation_set['log_price'].values - train_set['log_price']
 
 #load results from exact calculations to perform a comparison
 
-exact_pred_mean_train= np.loadtxt("/data/pred_mean_train.txt")
-exact_pred_var_train = np.loadtxt("/data/pred_var_train.txt")
-exact_pred_mean_inter = np.loadtxt("/data/pred_mean_inter.txt")
-exact_pred_var_inter = np.loadtxt("/data/pred_var_inter.txt")
-exact_pred_mean_extra = np.loadtxt("/data/pred_mean_extra.txt")
-exact_pred_var_extra = np.loadtxt("/data/pred_var_extra.txt")
+exact_pred_mean_train= np.loadtxt("/saved_values_exactGP/exact_pred_mean_train_house.txt")
+exact_pred_var_train = np.loadtxt("/saved_values_exactGP/exact_pred_var_train_house.txt")
+exact_pred_mean_inter = np.loadtxt("/saved_values_exactGP/exact_pred_mean_inter_house.txt")
+exact_pred_var_inter = np.loadtxt("/saved_values_exactGP/exact_pred_var_inter_house.txt")
+exact_pred_mean_extra = np.loadtxt("/saved_values_exactGP/exact_pred_mean_extra_house.txt")
+exact_pred_var_extra = np.loadtxt("/saved_values_exactGP/exact_pred_var_extra_house.txt")
 
 #covariance parameters estimated via exact computations
 truth = np.array([0.0787152849929405, 0.48967778700797876 ,618.2155717795291])

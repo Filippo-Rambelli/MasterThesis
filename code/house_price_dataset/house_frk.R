@@ -104,13 +104,13 @@ run_frk<-function(nres){
   extra_crps<-mean(crps(list(mean=pred_extra$mu,sd=sqrt(pred_extra$var)),house_extra$log_price))
   
   #loading results from exact calculations to perform a comparison
-  pred_exact_mean_train <- read_csv("/data/pred_mean_train.txt",   col_names = FALSE)$X1
-  pred_exact_mean_inter <- read_csv("/data/pred_mean_inter.txt",   col_names = FALSE)$X1
-  pred_exact_mean_extra <- read_csv("/data/pred_mean_extra.txt",   col_names = FALSE)$X1
+  pred_exact_mean_train <- read_csv("/saved_values_exactGP/exact_pred_mean_train_house.txt",   col_names = FALSE)$X1
+  pred_exact_mean_inter <- read_csv("/saved_values_exactGP/exact_pred_mean_inter_house.txt",   col_names = FALSE)$X1
+  pred_exact_mean_extra <- read_csv("/saved_values_exactGP/exact_pred_mean_extra_house.txt",   col_names = FALSE)$X1
   
-  pred_exact_var_train <- read_csv("/data/pred_var_train.txt",   col_names = FALSE)$X1
-  pred_exact_var_inter <- read_csv("/data/pred_var_inter.txt",   col_names = FALSE)$X1
-  pred_exact_var_extra <- read_csv("/data/pred_var_extra.txt",   col_names = FALSE)$X1
+  pred_exact_var_train <- read_csv("/saved_values_exactGP/exact_pred_var_train_house.txt",   col_names = FALSE)$X1
+  pred_exact_var_inter <- read_csv("/saved_values_exactGP/exact_pred_var_inter_house.txt",   col_names = FALSE)$X1
+  pred_exact_var_extra <- read_csv("/saved_values_exactGP/exact_pred_var_extra_house.txt",   col_names = FALSE)$X1
   
   #rmse between predictive means
   train_rmse_mean<-sqrt(mean((pred_train$mu-pred_exact_mean_train)^2))
