@@ -124,7 +124,7 @@ writeLines(c(
   paste0("rmse train: ", train_RMSE),
   paste0("rmse test: ", test_RMSE),
   paste0("crps train: ", train_crps),
-  paste0("crps test: ", train_crps),
+  paste0("crps test: ", test_crps),
   paste0("true negloglik: "),
   paste0("fake negloglik: "),
   paste0("time for true negloglik evaluation: "),
